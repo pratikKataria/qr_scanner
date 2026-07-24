@@ -17,6 +17,8 @@ exports.generateQr = async (req, res) => {
         // 2. Target URI Construction
         const targetUrl = `${config.baseUrl}/app?mosque_id=${encodeURIComponent(mosqueId)}`;
         
+        console.log("Scaner target url " + targetUrl);
+
         // 3. Service Execution
         const qrBuffer = await qrService.generateQrBuffer(targetUrl);
         
