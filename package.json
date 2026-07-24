@@ -1,0 +1,12 @@
+{
+  "name": "qr_router_node",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "pm2 start ecosystem.config.js --env production"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "qrcode": "^1.5.3"
+  }
+}
