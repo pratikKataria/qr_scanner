@@ -1,7 +1,6 @@
 const express = require('express');
 const config = require('./config');
 const assetLinksController = require('./controllers/assetLinksController');
-const qrController = require('./controllers/qrController');
 const routingController = require('./controllers/routingController');
 const healthController = require('./controllers/healthController');
 
@@ -19,7 +18,6 @@ app.use((req, res, next) => {
 // Register Core Routes
 app.get('/.well-known/assetlinks.json', assetLinksController.getAssetLinks);
 app.get('/app', routingController.handleAppRoute);
-app.get('/api/v1/generate-qr', qrController.generateQr);
 
 // Register Health Route
 app.get('/health', healthController.checkHealth);
