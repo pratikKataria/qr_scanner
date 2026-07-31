@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/app.js",
   "scripts": {
-    "start": "pm2 start ecosystem.config.js --env production"
+    "start": "pm2 start src/app.js --name qr-router"
   },
   "dependencies": {
     "express": "^4.18.2",
